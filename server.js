@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const mysql = require('mysql2');
-require('dotenv').config()
+
 
 // server used to send send emails
 const app = express();
@@ -14,23 +13,6 @@ app.listen(3001, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-const connection = mysql.createConnection(process.env.DATABASE_URL)
-
-
-app.get('/', (req, res) => {
-  console.log('Hello World')
-  res.send('Hello World!!')
-})
-
-
-
-app.get("/contact", (req,res)=>{
-  const q = "SELECT * FROM contact"
-  connection.query(q,(err,data)=>{
-      if(err) return res.json(err)
-      return res.json(data)
-  })
-})
 
 
 
