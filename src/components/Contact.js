@@ -27,7 +27,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("hhttps://long-erin-armadillo-gown.cyclic.app/sendapi", {
+    let response = await fetch("https://long-erin-armadillo-gown.cyclic.app/sendapi", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
