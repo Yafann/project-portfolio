@@ -39,10 +39,10 @@ export const Contact = () => {
     setFormDetails(formInitialDetails);
     if (result.status == "success") {
       setStatus({ succes: true, message: 'Message sent successfully'});
-      alert("Message sent successfully");
+      //alert("Message sent successfully");
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-      alert("Something went wrong, please try again later.");
+      //alert("Something went wrong, please try again later.");
     }
   };
 
